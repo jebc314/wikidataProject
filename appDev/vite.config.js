@@ -8,5 +8,5 @@ export default {
       }
     }
   },
-  base: '/wikidataProjectDev/'
+  base: '/wikidataProject/'
 }
