@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/style.css" rel="stylesheet">
+    <title>Item</title>
+</head>
+<body>
+    <h1><a target="_blank" id="labelLink"><span id="label"></span></a></h1>
+    <img id="image" hidden style="width: 60%; height: auto"/>
+    <p><span id="description"></span></p>
+    <p><span id="genderLabel"></span><span id="gender"></span></p>
+    <p><span id="dateOfBirthLabel"></span><span id="dateOfBirth"></span></p>
+    <p><span id="dateOfDeathLabel" hidden></span><span id="dateOfDeath"></span></p>
+    <p><span id="occupationLabel"></span><span id="occupation"></span></p>
+    <p><span id="affiliationLabel" hidden></span><span id="affiliation"></span></p>
+    <select name="language" id="language">
+    </select>
+    <script type="module" src="/src/item.ts"></script>
+</body>
+</html>

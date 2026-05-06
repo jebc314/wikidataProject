@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" crossorigin href="/wikidataProjectDev/assets/style-BtH_JE6A.css">
+</head>
+<body style="width: 100vw; height: 100vh;">
+    <h1>Guide to Editing WikiData</h1>
+    <a href="/index.html" target="_blank" style="position: absolute; top: 10px; right: 10px; padding: 5px; font-size: 16px;"><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='24px'%20viewBox='0%20-960%20960%20960'%20width='24px'%20fill='%23000000'%3e%3cpath%20d='M240-200h120v-240h240v240h120v-360L480-740%20240-560v360Zm-80%2080v-480l320-240%20320%20240v480H520v-240h-80v240H160Zm320-350Z'/%3e%3c/svg%3e" alt="Home" width="30px" height="30px"></a>
+
+    <h2>Creating an account</h2>
+    <p>To edit Wikidata, you first need to create an account. Go to <a href="https://www.wikidata.org/wiki/Special:CreateAccount" target="_blank">https://www.wikidata.org/wiki/Special:CreateAccount</a> and fill in the required information to create your account.</p>
+
+    <h2>Logging in</h2>
+    <p>Once you have created an account, you can log in to Wikidata at <a href="https://www.wikidata.org/wiki/Special:UserLogin" target="_blank">https://www.wikidata.org/wiki/Special:UserLogin</a>.</p>
+
+    <h2>Top of the Page</h2>  
+    <p>Here we have an example Wikidata page called <a href="https://www.wikidata.org/wiki/Q4115189" target="_blank">Wikidata Sandbox</a>. At the top of the page, the entry's name in your default language, as well as the Wikidata ID in parentheses, are displayed. Below there includes the entry's description and a table of the entry's label and description in other languages.</p>
+    <iframe src="https://www.wikidata.org/wiki/Q4115189#firstHeading" style="width: 100%; height: 100vh;"></iframe>
+
+    <h2>Statements</h2>
+    <p>Statements are the basic units of information in Wikidata. To add a property or a value that's associated with the entry, you add to the statements. For example, if you want denote that an entry is a person, you would add the value of human to the "instance of" property.</p>
+    <iframe src="https://www.wikidata.org/wiki/Q4115189#claims" style="width: 100%; height: 100vh;"></iframe>
+
+    <h2>Adding a Statement</h2>
+    <p>NOTE: You cannot save edits directly within the frame below due to Wikidata's security settings. You can still interact, view the content, and click the buttons to edit, but cannot save edits.</p>
+    <p>Let's say we wanted to add a statement about the entry's use. If the statement already exists, you can edit it directly. Here it's the statement "has use".</p>
+    <p>Click the "+ add value" button, and then, it will open a new row with a edit field to add new value.</p>
+    <p>When adding a new value, the edit field will pull up a list of recommended values. It is generally good practice to select from the recommended values when possible, or link to an existing Wikidata item. To save the value, click "Publish". To cancel, click "Cancel".</p>
+    <p>You can also add a reference to support the statement. Clicking the "add reference" button will pull up a new section within the value's row.</p>
+    <p>In the reference section, you can add a property and value to support the statement. For example, you can add "stated in" as the property, which pulls up an additional edit field next to it. Then, you can link to a source as the value.</p>
+    <iframe src="https://www.wikidata.org/wiki/Q4115189#P366" style="width: 100%; height: 100vh;"></iframe>
+
+    <!--<script type="module" src="/src/guide.ts"></script>-->
+</body>
+</html>

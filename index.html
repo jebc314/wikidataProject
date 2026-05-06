@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <script type="module" crossorigin src="/wikidataProjectDev/assets/index-DZ4SeDGu.js"></script>
+  <link rel="modulepreload" crossorigin href="/wikidataProjectDev/assets/helper-CIz_ViGS.js">
+  <link rel="stylesheet" crossorigin href="/wikidataProjectDev/assets/index-Dycyt6Tk.css">
+  <link rel="stylesheet" crossorigin href="/wikidataProjectDev/assets/style-BtH_JE6A.css">
+</head>
+<body>
+    <div id="overlay" style="display: flex; justify-content: center; align-items: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.8); z-index: 2;">
+        <h1>Loading...</h1>
+    </div>
+    <div id="tools" style="position: absolute; top: 10px; left: 10px; z-index: 1; display: flex; gap: 10px; align-items: center;">
+        <button id="home" style="padding: 5px; font-size: 16px;"><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='24px'%20viewBox='0%20-960%20960%20960'%20width='24px'%20fill='%23000000'%3e%3cpath%20d='M240-200h120v-240h240v240h120v-360L480-740%20240-560v360Zm-80%2080v-480l320-240%20320%20240v480H520v-240h-80v240H160Zm320-350Z'/%3e%3c/svg%3e" alt="Home" width="30px" height="30px"></button>
+        <input list="suggestions" id="search-input" placeholder="Search nodes..." style="padding: 5px; font-size: 16px;">
+        <datalist id="suggestions"></datalist>
+    </div>
+    <div id="container" style="width: 100vw; height: 100vh; background: white"></div>
+    <div id="additional-tools" style="position: absolute; bottom: 10px; left: 10px; z-index: 1; display: flex; gap: 10px; align-items: center;">
+        <button id="about" style="padding: 5px; font-size: 16px;" popovertarget="about-dialog"><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='24px'%20viewBox='0%20-960%20960%20960'%20width='24px'%20fill='%23000000'%3e%3cpath%20d='M440-280h80v-240h-80v240Zm68.5-331.5Q520-623%20520-640t-11.5-28.5Q497-680%20480-680t-28.5%2011.5Q440-657%20440-640t11.5%2028.5Q463-600%20480-600t28.5-11.5ZM480-80q-83%200-156-31.5T197-197q-54-54-85.5-127T80-480q0-83%2031.5-156T197-763q54-54%20127-85.5T480-880q83%200%20156%2031.5T763-763q54%2054%2085.5%20127T880-480q0%2083-31.5%20156T763-197q-54%2054-127%2085.5T480-80Zm0-80q134%200%20227-93t93-227q0-134-93-227t-227-93q-134%200-227%2093t-93%20227q0%20134%2093%20227t227%2093Zm0-320Z'/%3e%3c/svg%3e" alt="About" width="30px" height="30px"></button>
+        <select name="language" id="language" style="padding: 5px; font-size: 16px;">
+        </select>
+    </div>
+    <dialog id="about-dialog" popover style="border-radius: 10px; width: 25%; height: 40%; padding: 20px;">
+        <h1>About</h1>
+        <p>You can start a tour at any time by clicking the "Tour" button.</p>
+        <button id="start-tour" style="padding: 5px; font-size: 16px;" popovertarget="about-dialog" popovertargetaction="hide"><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='24px'%20viewBox='0%20-960%20960%20960'%20width='24px'%20fill='%23000000'%3e%3cpath%20d='M200-80v-800h80v80h560l-80%20200%2080%20200H280v320h-80Zm80-640v240-240Zm276.5%20176.5Q580-567%20580-600t-23.5-56.5Q533-680%20500-680t-56.5%2023.5Q420-633%20420-600t23.5%2056.5Q467-520%20500-520t56.5-23.5ZM280-480h442l-48-120%2048-120H280v240Z'/%3e%3c/svg%3e" alt="Tour" width="30px" height="30px"></button>
+        <p>For how to contribute to Wikidata, please visit <a href="guide.html" target="_blank">the guide</a>.</p>
+        <button popovertarget="about-dialog" popovertargetaction="hide" style="position: absolute; bottom: 10px; right: 10px;"><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='24px'%20viewBox='0%20-960%20960%20960'%20width='24px'%20fill='%23000000'%3e%3cpath%20d='m336-280%20144-144%20144%20144%2056-56-144-144%20144-144-56-56-144%20144-144-144-56%2056%20144%20144-144%20144%2056%2056ZM480-80q-83%200-156-31.5T197-197q-54-54-85.5-127T80-480q0-83%2031.5-156T197-763q54-54%20127-85.5T480-880q83%200%20156%2031.5T763-763q54%2054%2085.5%20127T880-480q0%2083-31.5%20156T763-197q-54%2054-127%2085.5T480-80Zm0-80q134%200%20227-93t93-227q0-134-93-227t-227-93q-134%200-227%2093t-93%20227q0%20134%2093%20227t227%2093Zm0-320Z'/%3e%3c/svg%3e" alt="Close" width="30px" height="30px"></button>
+    </dialog>
+    </div>
+    <div id="info-panel" style="position: absolute; top: 0px; right: 0px; height: 100%; width: 30%; z-index: 1; padding: 5px; font-size: 16px; background: white; border: 1px solid #ccc;" hidden>
+        <button id="close-info" style="position: absolute; top: 5px; right: 5px; padding: 5px; font-size: 16px;"><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='24px'%20viewBox='0%20-960%20960%20960'%20width='24px'%20fill='%23000000'%3e%3cpath%20d='m336-280%20144-144%20144%20144%2056-56-144-144%20144-144-56-56-144%20144-144-144-56%2056%20144%20144-144%20144%2056%2056ZM480-80q-83%200-156-31.5T197-197q-54-54-85.5-127T80-480q0-83%2031.5-156T197-763q54-54%20127-85.5T480-880q83%200%20156%2031.5T763-763q54%2054%2085.5%20127T880-480q0%2083-31.5%20156T763-197q-54%2054-127%2085.5T480-80Zm0-80q134%200%20227-93t93-227q0-134-93-227t-227-93q-134%200-227%2093t-93%20227q0%20134%2093%20227t227%2093Zm0-320Z'/%3e%3c/svg%3e" alt="Close" width="30px" height="30px"></button>
+        <iframe id="info-frame" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
+</body>
+</html>
